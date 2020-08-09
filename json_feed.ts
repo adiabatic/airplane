@@ -23,7 +23,7 @@ export default interface Feed {
   // TODO: hubs
   // TODO: handle extensions? ("_blue_shed")
 
-  items: FeedItem[];
+  items: Item[];
 }
 
 export interface Author {
@@ -32,7 +32,7 @@ export interface Author {
   avatar?: string;
 }
 
-export interface FeedItem {
+export interface Item {
   id: string;
   url?: string;
   external_url?: string;
