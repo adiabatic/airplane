@@ -8,7 +8,7 @@ app.use((ctx) => {
 
 const SERVER = "127.0.0.1";
 const PORT = 8000;
-const LISTEN_TARGET = `${SERVER}:${PORT}`
+const LISTEN_TARGET = `${SERVER}:${PORT}`;
 console.log(`Listening on <http://${LISTEN_TARGET}>`);
 
 await app.listen(LISTEN_TARGET);
