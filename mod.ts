@@ -1,4 +1,4 @@
-import { Application } from "https://deno.land/x/oak/mod.ts"; // probably 4.0, but I'm not picky yet
+import { Application } from "./deps.ts";
 import Feed from "./json_feed.ts";
 
 const app = new Application();
