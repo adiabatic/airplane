@@ -1,12 +1,12 @@
-enum FeedVersion {
+enum VersionList {
   "https://jsonfeed.org/version/1",
   "https://jsonfeed.org/version/1.1",
 }
 
-type FeedVersionString = keyof typeof FeedVersion;
+export type Version = keyof typeof VersionList;
 
 export default interface Feed {
-  version: FeedVersionString;
+  version: Version;
   title: string;
   home_page_url?: string;
   feed_url?: string;
