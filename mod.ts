@@ -87,12 +87,4 @@ const PORT = 3000;
 const LISTEN_TARGET = `${SERVER}:${PORT}`;
 console.log(`Listening on <http://${LISTEN_TARGET}>`);
 
-
-
-
-
-
-
-
-
 await app.listen(LISTEN_TARGET);
