@@ -1,12 +1,12 @@
-enum JSONFeedVersion {
+enum FeedVersion {
   "https://jsonfeed.org/version/1",
   "https://jsonfeed.org/version/1.1",
 }
 
-type JSONFeedVersionString = keyof typeof JSONFeedVersion;
+type FeedVersionString = keyof typeof FeedVersion;
 
-export default interface JSONFeed {
-  version: JSONFeedVersionString;
+export default interface Feed {
+  version: FeedVersionString;
   title: string;
   home_page_url?: string;
   feed_url?: string;
@@ -15,24 +15,24 @@ export default interface JSONFeed {
   next_url?: string;
   icon?: string;
   favicon?: string;
-  author?: JSONFeedAuthor; // 1.0 holdover
-  authors?: JSONFeedAuthor[];
+  author?: Author; // 1.0 holdover
+  authors?: Author[];
   language?: string;
   expired?: boolean;
 
   // TODO: hubs
   // TODO: handle extensions? ("_blue_shed")
 
-  items: JSONFeedItem[];
+  items: FeedItem[];
 }
 
-export interface JSONFeedAuthor {
+export interface Author {
   name?: string;
   url?: string;
   avatar?: string;
 }
 
-export interface JSONFeedItem {
+export interface FeedItem {
   id: string;
   url?: string;
   external_url?: string;
@@ -44,15 +44,15 @@ export interface JSONFeedItem {
   banner_image?: string;
   date_published?: string; // RFC 3339, not always zulu time
   date_modified?: string;
-  author?: JSONFeedAuthor; // 1.0 holdover
-  authors?: JSONFeedAuthor[];
+  author?: Author; // 1.0 holdover
+  authors?: Author[];
   tags?: string[];
   language?: string;
 
-  attachments?: JSONFeedAttachment[];
+  attachments?: Attachment[];
 }
 
-export interface JSONFeedAttachment {
+export interface Attachment {
   url: string;
   mime_type: string;
   title?: string;
