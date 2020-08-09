@@ -3,9 +3,6 @@ import Feed from "./json_feed.ts";
 
 const app = new Application();
 
-
-
-
 function feedToHTML(feed: Feed): string {
   const template = `
   <!DOCTYPE html>
@@ -84,6 +81,13 @@ app.use((ctx) => {
     ctx.response.body = aFeed;
   }
 });
+
+
+
+
+
+
+
 
 const SERVER = "127.0.0.1";
 const PORT = 3000;
