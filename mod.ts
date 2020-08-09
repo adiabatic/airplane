@@ -1,7 +1,10 @@
 import { Application } from "./deps.ts";
 import Feed from "./json_feed.ts";
 
-const app = new Application();  
+const app = new Application();
+
+
+
 
 function feedToHTML(feed: Feed): string {
   const template = `
